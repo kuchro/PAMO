@@ -12,7 +12,8 @@ import android.widget.TextView; // for displaying text
 import java.text.DecimalFormat;
 
 //Autor Karol Kuchnio s21912
-public class MainActivity extends AppCompatActivity {
+public class BMIActivity extends AppCompatActivity {
+
 
     // currency and percent formatter objects
 // formatter object for number formatting
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         EditText heightEditText =
                 (EditText) findViewById(R.id.heightEditText);
         heightEditText.addTextChangedListener(heightEditTextWatcher);
+        // hide the splash screen after a delay
+
+
     }
     //calculate bmi
     private void calculateBMI() {
@@ -110,4 +114,6 @@ public class MainActivity extends AppCompatActivity {
         public void beforeTextChanged(
                 CharSequence s, int start, int count, int after) { }
     };
+
+
 }

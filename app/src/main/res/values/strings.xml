@@ -1,7 +1,18 @@
 <resources>
-   <string name="app_name">Tip Calculator</string>
-   <string name="enter_amount">Enter Amount</string>
-   <string name="tip_percentage">15%</string>
-   <string name="tip">Tip</string>
-   <string name="total">Total</string>
+    <string name="app_name">Tip Calculator</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="tip_percentage">15%</string>
+    <string name="tip">Tip</string>
+    <string name="total">Total</string>
+    <string name="calories_calculator">Calories Calculator</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="recipes">Recipes</string>
+    <string name="calculate_the_number_of_calories_needed_each_day">Calculate the number of calories needed each day</string>
+    <string name="age">Age</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">Result</string>
 </resources>
