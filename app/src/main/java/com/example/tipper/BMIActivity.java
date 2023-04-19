@@ -2,18 +2,30 @@ package com.example.tipper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable; // for EditText event handling
 import android.text.TextWatcher; // EditText listener
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText; // for bill amount input
 
 import android.widget.TextView; // for displaying text
 
+import com.example.tipper.inmemory.BMIResultData;
+
+import java.io.Serializable;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 //Autor Karol Kuchnio s21912
 public class BMIActivity extends AppCompatActivity {
+    private BMIResultData bmiResultData;
 
+    private Button saveButton; // save button
+    private Button chartView; // save button
 
     // currency and percent formatter objects
 // formatter object for number formatting
@@ -31,10 +43,14 @@ public class BMIActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); // call superclass onCreate
         setContentView(R.layout.activity_main); // inflate the GUI
-
+        bmiResultData = BMIResultData.getInstance();
         // get references to programmatically manipulated TextViews
         weightTextView = (TextView) findViewById(R.id.weightTextView);
+        weightTextView.setFocusable(true);
+        weightTextView.setFocusableInTouchMode(true);
         heightTextView = (TextView) findViewById(R.id.heightTextView);
+        heightTextView.setFocusable(true);
+        heightTextView.setFocusableInTouchMode(true);
         totalTextView = (TextView) findViewById(R.id.totalTextView);
 
         // get references to programmatically manipulated TextViews
@@ -51,8 +67,25 @@ public class BMIActivity extends AppCompatActivity {
         heightEditText.addTextChangedListener(heightEditTextWatcher);
         // hide the splash screen after a delay
 
+        saveButton = findViewById(R.id.saveButton);
+        saveButton.setOnClickListener(v -> saveBMIResult());
 
+        chartView = findViewById(R.id.graph);
+        chartView.setOnClickListener(v -> startBMIGraphActivity());
     }
+
+    private void startBMIGraphActivity() {
+        Intent intent = new Intent(this, BMIGraphActivity.class);
+        startActivity(intent);
+    }
+
+    // Save the current BMI result to the list
+    private void saveBMIResult() {
+        double bmi = Double.parseDouble(totalTextView.getText().toString());
+
+        bmiResultData.addBMIResult(bmi);
+    }
+
     //calculate bmi
     private void calculateBMI() {
 
@@ -114,6 +147,16 @@ public class BMIActivity extends AppCompatActivity {
         public void beforeTextChanged(
                 CharSequence s, int start, int count, int after) { }
     };
+
+    public static class BMIResult implements Serializable {
+        public double bmi;
+        public Date date;
+
+        public BMIResult(double bmi, Date date) {
+            this.bmi = bmi;
+            this.date = date;
+        }
+    }
 
 
 }

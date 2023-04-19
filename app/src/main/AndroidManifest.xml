@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".BMIGraphActivity"
+            android:exported="true" />
+        <activity
             android:name=".QuizActivity"
             android:exported="false"
             android:label="@string/title_activity_quiz"
@@ -22,7 +25,8 @@
             android:name=".CaloriesCalcActivity"
             android:exported="false" />
         <activity android:name=".BMIActivity" />
-        <activity android:name=".WelcomeScreenActivity">
+        <activity android:name=".WelcomeScreenActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
