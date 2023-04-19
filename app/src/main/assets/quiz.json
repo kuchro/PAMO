@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Który z poniższych składników jest źródłem białka roślinnego?",
+    "answers": {
+      "a": "Kurczak",
+      "b": "Jajka",
+      "c": "Ciecierzyca",
+      "d": "Ser"
+    },
+    "validAnswer": "Ciecierzyca"
+  },
+  {
+    "question": "Ile porcji owoców i warzyw powinno się spożywać dziennie, aby utrzymać zdrową dietę?",
+    "answers": {
+      "a": "2-3",
+      "b": "3-4",
+      "c": "5-6",
+      "d": "7-8"
+    },
+    "validAnswer": "c"
+  },
+  {
+    "question": "Który z poniższych tłuszczów jest uważany za zdrowy?",
+    "answers": {
+      "a": "Tłuszcz nasycony",
+      "b": "Tłuszcz trans",
+      "c": "Tłuszcz jednonienasycony",
+      "d": "Tłuszcz wielonienasycony"
+    },
+    "validAnswer": "Tłuszcz jednonienasycony"
+  },
+  {
+    "question": "Co jest ważnym źródłem błonnika pokarmowego?",
+    "answers": {
+      "a": "Mięso",
+      "b": "Warzywa",
+      "c": "Słodycze",
+      "d": "Tłuste potrawy"
+    },
+    "validAnswer": "Warzywa"
+  },
+  {
+    "question": "Która z poniższych witamin jest rozpuszczalna w tłuszczach?",
+    "answers": {
+      "a": "Witamina C",
+      "b": "Witamina D",
+      "c": "Witamina B6",
+      "d": "Witamina B12"
+    },
+    "validAnswer": "Witamina D"
+  },
+  {
+    "question": "Jaki rodzaj węglowodanów jest lepszy dla zdrowia?",
+    "answers": {
+      "a": "Proste",
+      "b": "Złożone",
+      "c": "Wszystkie są takie same",
+      "d": "Żadne z powyższych"
+    },
+    "validAnswer": "Złożone"
+  },
+  {
+    "question": "Jakie produkty spożywcze zawierają najwięcej białka?",
+    "answers": {
+      "a": "Mięso czerwone",
+      "b": "Jaja",
+      "c": "Ryby",
+      "d": "Wszystkie z powyższych"
+    },
+    "validAnswer": "Wszystkie z powyższych"
+  },
+  {
+    "question": "Jakie są najlepsze źródła kwasów omega-3?",
+    "answers": {
+      "a": "Orzechy włoskie",
+      "b": "Oliwa z oliwek",
+      "c": "Tłuste ryby",
+      "d": "Wszystkie z powyższych"
+    },
+    "validAnswer": "Tłuste ryby"
+  },
+  {
+    "question": "Co to są tłuszcze nasycone?",
+    "answers": {
+      "a": "Tłuszcze roślinne",
+      "b": "Tłuszcze zwierzęce",
+      "c": "Tłuszcze jednonienasycone",
+      "d": "Tłuszcze wielonienasycone"
+    },
+    "validAnswer": "Tłuszcze zwierzęce"
+  }
+]

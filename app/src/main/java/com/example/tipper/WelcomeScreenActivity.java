@@ -1,17 +1,12 @@
 package com.example.tipper;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.Button;
 
-import com.example.model.Recipe;
-import com.example.utils.RecipeUtil;
-
-import java.util.List;
 //Autor Karol Kuchnio s21912
 public class WelcomeScreenActivity extends AppCompatActivity {
 
@@ -23,29 +18,27 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
+        Button quizButton = findViewById(R.id.button4);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(WelcomeScreenActivity.this, BMIActivity.class);
-                startActivity(intent);
-            }
+        button1.setOnClickListener(view -> {
+            Intent intent = new Intent(WelcomeScreenActivity.this, BMIActivity.class);
+            startActivity(intent);
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(WelcomeScreenActivity.this, CaloriesCalcActivity.class);
-                startActivity(intent);
-            }
+        button2.setOnClickListener(view -> {
+            Intent intent = new Intent(WelcomeScreenActivity.this, CaloriesCalcActivity.class);
+            startActivity(intent);
         });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        button3.setOnClickListener(view -> {
 
-                Intent intent = new Intent(WelcomeScreenActivity.this, ActivityRecipe.class);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(WelcomeScreenActivity.this, ActivityRecipe.class);
+            startActivity(intent);
+        });
+
+        quizButton.setOnClickListener(view -> {
+
+            Intent intent = new Intent(WelcomeScreenActivity.this, QuizActivity.class);
+            startActivity(intent);
         });
 
     }
