@@ -10,29 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".BMIGraphActivity"
-            android:exported="true" />
-        <activity
-            android:name=".QuizActivity"
-            android:exported="false"
-            android:label="@string/title_activity_quiz"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ActivityRecipe"
-            android:exported="false" />
-        <activity
-            android:name=".CaloriesCalcActivity"
-            android:exported="false" />
-        <activity android:name=".BMIActivity" />
+
         <activity android:name=".WelcomeScreenActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BMIActivity" />
+        <activity android:name=".CaloriesCalcActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".ActivityRecipe" />
+        <activity android:name=".BMIGraphActivity" />
+        <!-- Declare other activities here -->
+
     </application>
 
 </manifest>
